@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rubictron.posfinal.view.controller.OrderManageController">
+    <stylesheets>
+        <URL value="@/lk/rubictron/posfinal/view/ui/style/ordermanage.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableOrderDetails" layoutX="15.0" layoutY="34.0" prefHeight="413.0" prefWidth="610.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="34.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="288.0" layoutY="400.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <buttons>
+            <JFXButton fx:id="btnSerch" onAction="#abtnSerch" text="Serch" />
+            <JFXButton fx:id="btnViewAll" onAction="#abtnViewAll" text="View All" />
+         </buttons>
+      </ButtonBar>
+      <JFXTextField fx:id="textfSerch" layoutX="15.0" layoutY="485.0" prefHeight="24.0" prefWidth="391.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" />
+   </children>
+</AnchorPane>
