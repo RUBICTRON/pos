@@ -242,6 +242,7 @@ public class DashbController implements Initializable {
             } else {
 
                 logUser.setText("Login Confirmed");
+                 loadAnchor("order");
 
             }
         } catch (Exception ex) {

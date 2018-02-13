@@ -16,9 +16,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="ap" fx:id="ap" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" stylesheets="@style/dashb.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rubictron.posfinal.view.controller.DashbController">
+<AnchorPane id="ap" fx:id="ap" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" stylesheets="@style/dashb.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.rubictron.posfinal.view.controller.DashbController">
    <children>
-      <AnchorPane id="apmain" fx:id="apmain" layoutX="383.0" layoutY="16.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/dashb.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
+      <AnchorPane id="apmain" fx:id="apmain" layoutX="383.0" layoutY="16.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style/dashb.css" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
          <children>
             <AnchorPane id="ap" fx:id="login" layoutX="43.0" layoutY="98.0" minHeight="525.0" minWidth="640.0" prefHeight="525.0" prefWidth="640.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                <stylesheets>
@@ -59,7 +59,7 @@
                </children>
             </AnchorPane>
          </children></AnchorPane>
-      <AnchorPane fx:id="apleft" layoutX="14.0" layoutY="35.0" maxWidth="145.0" prefHeight="590.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="70.0">
+      <AnchorPane fx:id="apleft" layoutX="14.0" layoutY="35.0" maxWidth="145.0" prefHeight="590.0" prefWidth="100.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="70.0">
          <children>
             <GridPane layoutX="33.0" layoutY="41.0" prefHeight="149.0" prefWidth="112.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <columnConstraints>
@@ -100,7 +100,7 @@
                   </JFXButton>
                </children>
             </GridPane>
-            <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="21.0" layoutY="420.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+            <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="21.0" layoutY="420.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                <image>
                   <Image url="@icon/Asitha%20Logo.png" />
                </image>
@@ -128,7 +128,7 @@
                   <JFXButton fx:id="btnLogout" onAction="#abtnLogout" onMouseClicked="#clickLogout" prefHeight="26.0" prefWidth="104.0" text="Log Out" GridPane.columnIndex="2" />
                </children>
             </GridPane>
-            <Label alignment="CENTER" layoutX="49.0" layoutY="21.0" minWidth="-Infinity" prefWidth="500.0" text="Modern POS System" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Label alignment="CENTER" layoutX="49.0" layoutY="21.0" minWidth="-Infinity" prefWidth="500.0" text="Modern POS System" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="7.0">
                <font>
                   <Font size="30.0" />
                </font>
@@ -142,5 +142,10 @@
                </textFill>
             </Label>
          </children></AnchorPane>
+      <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="810.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="134.0" layoutY="1.0" prefHeight="24.0" prefWidth="657.0" text="Asita Sandakalum @Rubictron p.asithasandakelum@gmail.com" textFill="#fffdfd" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

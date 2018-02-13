@@ -104,6 +104,9 @@ public class CustomerController implements Initializable {
 
             }
         });
+         
+         
+         viewall();
     }
 
     @FXML
@@ -144,7 +147,13 @@ public class CustomerController implements Initializable {
     @FXML
     private void clickBtnViewAll(MouseEvent event) {
 
-        try {
+        viewall();
+
+    }
+    
+    
+    private void viewall(){
+    try {
 
             ArrayList<CustomerDto> customer = controler.getAllCustomers();
             ArrayList<CustomerTM> alcus = new ArrayList<CustomerTM>();
@@ -158,7 +167,7 @@ public class CustomerController implements Initializable {
         } catch (Exception ex) {
             Logger.getLogger(CustomerController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+    
     }
 
     @FXML

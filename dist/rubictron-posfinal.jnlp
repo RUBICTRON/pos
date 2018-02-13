@@ -18,7 +18,7 @@
     <jar href="lib/jasperreports-javaflow-6.5.1.jar" size="5559945" download="eager" />
     <jar href="lib/jfoenix.jar" size="2401594" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
-    <jar href="rubictron-posfinal.jar" size="920854" download="eager" />
+    <jar href="rubictron-posfinal.jar" size="921017" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="rubictron-posfinal" >
     <param name="requiredFXVersion" value="8.0+"/>

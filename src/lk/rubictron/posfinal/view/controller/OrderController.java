@@ -235,7 +235,7 @@ public class OrderController implements Initializable {
         tableo.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("total"));
 
         setNewOrderId();
-        textf_date.getEditor().setText(String.valueOf(LocalDate.now()));
+//        textf_date.getEditor().setText(String.valueOf(LocalDate.now()));
     
 
         try {
