@@ -7,9 +7,13 @@ package lk.rubictron.posfinal.view.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URISyntaxException;
 import lk.rubictron.posfinal.dto.ItemDto;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,6 +29,17 @@ import lk.rubictron.posfinal.view.util.tablemodel.ItemTM;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import lk.rubictron.posfinal.controller.custom.CommenControler;
+import lk.rubictron.posfinal.dao.ConnectionFactory;
+import net.sf.jasperreports.engine.DefaultJasperReportsContext;
+import net.sf.jasperreports.engine.JREmptyDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.engine.util.LocalJasperReportsContext;
+import net.sf.jasperreports.engine.util.SimpleFileResolver;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  * FXML Controller class
@@ -54,6 +69,8 @@ public class ItemController implements Initializable {
     private CommenControler controler;
     @FXML
     private TableView<ItemTM> tableItem;
+    @FXML
+    private JFXButton btnItemReport;
 
     public ItemController() {
 
@@ -90,6 +107,10 @@ public class ItemController implements Initializable {
 
             }
         });
+        
+        abtnViewAll(new ActionEvent());
+        
+        
         
         
     }
@@ -163,6 +184,22 @@ public class ItemController implements Initializable {
         }
 
         
+    }
+
+    @FXML
+    private void abtnItemReport(ActionEvent event) {
+        try {
+            JasperReport compiledReport = (JasperReport) JRLoader.loadObject(ItemController.class.getResourceAsStream("/lk/rubictron/posfinal/view/report/item.jasper"));
+            
+            HashMap<String, Object> reportParams = new HashMap<>();
+            
+            JasperPrint filledReport = JasperFillManager.fillReport(compiledReport, reportParams, ConnectionFactory.getInstance().getConnection());
+            
+            JasperViewer.viewReport(filledReport); 
+        } catch (JRException ex) {
+            Logger.getLogger(ItemController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+ 
     }
 
 }

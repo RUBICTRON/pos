@@ -17,6 +17,7 @@ import lk.rubictron.posfinal.dto.OrderDto;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -33,7 +34,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import lk.rubictron.posfinal.dao.ConnectionFactory;
 import lk.rubictron.posfinal.view.util.tablemodel.OrderTM;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  * FXML Controller class
@@ -147,7 +154,7 @@ public class OrderController implements Initializable {
 
     @FXML
     private void abtnConfirm(ActionEvent event) {
-        
+        String id=textf_orderId.getText();
         
         
 
@@ -177,6 +184,23 @@ public class OrderController implements Initializable {
         textf_itemQty.clear();
         textf_totalOfOne.clear();
         textf_total.clear();
+        
+        
+        
+        JasperReport compiledReport = (JasperReport) JRLoader.loadObject(OrderController.class.getResourceAsStream("/lk/rubictron/posfinal/view/report/order.jasper"));
+            
+            HashMap<String, Object> reportParams = new HashMap<>();
+            reportParams.put("orderId",id);
+            
+            JasperPrint filledReport = JasperFillManager.fillReport(compiledReport, reportParams, ConnectionFactory.getInstance().getConnection());
+            
+            JasperViewer.viewReport(filledReport); 
+        
+        
+        
+        
+        
+        
         } catch (Exception ex) {
             Logger.getLogger(OrderController.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -37,7 +37,7 @@
             <JFXTextField fx:id="textfSalary" labelFloat="true" promptText="Salary" GridPane.columnSpan="2" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <TableView fx:id="tableCus" layoutX="49.0" layoutY="160.0" prefHeight="171.0" prefWidth="523.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="250.0">
+      <TableView fx:id="tableCus" layoutX="49.0" layoutY="160.0" prefHeight="230.0" prefWidth="610.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="250.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Customer Id" />
           <TableColumn prefWidth="75.0" text="Name" />
@@ -50,7 +50,7 @@
       </TableView>
       <ButtonBar layoutX="385.0" layoutY="119.0" minHeight="25.0" prefHeight="25.0" prefWidth="236.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="205.0">
          <buttons>
-            <JFXButton fx:id="btnSave" onMouseClicked="#clickBtnSave" text="Save" />
+            <JFXButton fx:id="btnSave" onMouseClicked="#clickBtnSave" styleClass="btn btn-primary" stylesheets="@style/css/bootstrap.min.css" text="Save" />
             <JFXButton fx:id="btnDelete" onMouseClicked="#clickBtnDelete" text="Delete" />
             <JFXButton fx:id="btnViewAll" onMouseClicked="#clickBtnViewAll" text="View All" />
          </buttons>
@@ -60,5 +60,6 @@
             <Image url="@icon/index.jpeg" />
          </image>
       </ImageView>
+      <JFXButton fx:id="btnCustomerReport" layoutX="384.0" layoutY="483.0" onAction="#abtnCustomerReport" prefHeight="26.0" prefWidth="242.0" text="View All Customers in Report" />
    </children>
 </AnchorPane>
